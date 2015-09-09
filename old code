@@ -1,0 +1,1378 @@
+package CS121proj2.mzheng2.ie.CS121proj2jcschultz;
+
+public class PlayGame extends TheEnhancedGameOfPig {
+	public static void main(String[] args) {
+		System.out.println("Welcome to The Game of Pig!");
+		new TheEnhancedGameOfPig();
+	}
+}
+
+package CS121proj2.mzheng2.ie.CS121proj2jcschultz;
+
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+
+public class TheEnhancedGameOfPig {
+	static ArrayList<Integer> list = new ArrayList<Integer>();
+	static Boolean playerOne = true;
+	static Boolean playerTwo = true;
+	static Boolean playerThree = true;
+	static Boolean playerFour = true;
+	static Boolean playerFive = true;
+	static Boolean playerSix = true;
+	static Boolean playerSeven = true;
+	static Boolean playerEight = true;
+	static Boolean playerNine = true;
+	static Boolean playerTen = true;
+	static String name;
+	static String tname;
+	static String thname;
+	static String fname;
+	static String finame;
+	static String sname;
+	static String sename;
+	static String ename;
+	static String nname;
+	static String tename;
+	static int oPoints = 0;
+	static int tPoints = 0;
+	static int thPoints = 0;
+	static int fPoints = 0;
+	static int fiPoints = 0;
+	static int sPoints = 0;
+	static int sePoints = 0;
+	static int ePoints = 0;
+	static int nPoints = 0;
+	static int tePoints = 0;
+	static int oBank = 0;
+	static int tBank = 0;
+	static int thBank = 0;
+	static int fBank = 0;
+	static int fiBank = 0;
+	static int sBank = 0;
+	static int seBank = 0;
+	static int eBank = 0;
+	static int nBank = 0;
+	static int teBank = 0;
+	static int dice;
+	static int sum = 0;
+	static int num = 0;
+	static int number;
+	static int win;
+
+	protected TheEnhancedGameOfPig() {
+		System.out.println("2 to 10 players may play: ");
+		Scanner input = new Scanner(System.in);
+		num = input.nextInt();
+		input.nextLine();
+		if (num == 2) {
+			System.out.println("What is your name: ");
+			name = input.nextLine();
+			System.out.println("What is your name: ");
+			tname = input.nextLine();
+		} else if (num == 3) {
+			System.out.println("What is your name: ");
+			name = input.nextLine();
+			System.out.println("What is your name: ");
+			tname = input.nextLine();
+			System.out.println("What is your name: ");
+			thname = input.nextLine();
+		} else if (num == 4) {
+			System.out.println("What is your name: ");
+			name = input.nextLine();
+			System.out.println("What is your name: ");
+			tname = input.nextLine();
+			System.out.println("What is your name: ");
+			thname = input.nextLine();
+			System.out.println("What is your name: ");
+			fname = input.nextLine();
+		} else if (num == 5) {
+			System.out.println("What is your name: ");
+			name = input.nextLine();
+			System.out.println("What is your name: ");
+			tname = input.nextLine();
+			System.out.println("What is your name: ");
+			thname = input.nextLine();
+			System.out.println("What is your name: ");
+			fname = input.nextLine();
+			System.out.println("What is your name: ");
+			finame = input.nextLine();
+		} else if (num == 6) {
+			System.out.println("What is your name: ");
+			name = input.nextLine();
+			System.out.println("What is your name: ");
+			tname = input.nextLine();
+			System.out.println("What is your name: ");
+			thname = input.nextLine();
+			System.out.println("What is your name: ");
+			fname = input.nextLine();
+			System.out.println("What is your name: ");
+			finame = input.nextLine();
+			System.out.println("What is your name: ");
+			sname = input.nextLine();
+		} else if (num == 7) {
+			System.out.println("What is your name: ");
+			name = input.nextLine();
+			System.out.println("What is your name: ");
+			tname = input.nextLine();
+			System.out.println("What is your name: ");
+			thname = input.nextLine();
+			System.out.println("What is your name: ");
+			fname = input.nextLine();
+			System.out.println("What is your name: ");
+			finame = input.nextLine();
+			System.out.println("What is your name: ");
+			sname = input.nextLine();
+			System.out.println("What is your name: ");
+			sename = input.nextLine();
+		} else if (num == 8) {
+			System.out.println("What is your name: ");
+			name = input.nextLine();
+			System.out.println("What is your name: ");
+			tname = input.nextLine();
+			System.out.println("What is your name: ");
+			thname = input.nextLine();
+			System.out.println("What is your name: ");
+			fname = input.nextLine();
+			System.out.println("What is your name: ");
+			finame = input.nextLine();
+			System.out.println("What is your name: ");
+			sname = input.nextLine();
+			System.out.println("What is your name: ");
+			sename = input.nextLine();
+			System.out.println("What is your name: ");
+			ename = input.nextLine();
+		} else if (num == 9) {
+			System.out.println("What is your name: ");
+			name = input.nextLine();
+			System.out.println("What is your name: ");
+			tname = input.nextLine();
+			System.out.println("What is your name: ");
+			thname = input.nextLine();
+			System.out.println("What is your name: ");
+			fname = input.nextLine();
+			System.out.println("What is your name: ");
+			finame = input.nextLine();
+			System.out.println("What is your name: ");
+			sname = input.nextLine();
+			System.out.println("What is your name: ");
+			sename = input.nextLine();
+			System.out.println("What is your name: ");
+			ename = input.nextLine();
+			System.out.println("What is your name: ");
+			nname = input.nextLine();
+		} else if (num == 10) {
+			System.out.println("What is your name: ");
+			name = input.nextLine();
+			System.out.println("What is your name: ");
+			tname = input.nextLine();
+			System.out.println("What is your name: ");
+			thname = input.nextLine();
+			System.out.println("What is your name: ");
+			fname = input.nextLine();
+			System.out.println("What is your name: ");
+			finame = input.nextLine();
+			System.out.println("What is your name: ");
+			sname = input.nextLine();
+			System.out.println("What is your name: ");
+			sename = input.nextLine();
+			System.out.println("What is your name: ");
+			ename = input.nextLine();
+			System.out.println("What is your name: ");
+			nname = input.nextLine();
+			System.out.println("What is your name: ");
+			tename = input.nextLine();
+		}
+		System.out.println("Enter the amount of points player's must win by: ");
+		win = input.nextInt();
+		input.nextLine();
+		switch (num) {
+		case 2:
+			playerOne();
+			if (!playerOne) {
+				playerTwo();
+			}
+			break;
+		case 3:
+			playerOne();
+			if (!playerOne) {
+				playerTwo();
+				if (!playerTwo) {
+					playerThree();
+				}
+			}
+			break;
+		case 4:
+			playerOne();
+			if (!playerOne) {
+				playerTwo();
+				if (!playerTwo) {
+					playerThree();
+					if (!playerThree) {
+						playerFour();
+					}
+				}
+			}
+			break;
+		case 5:
+			playerOne();
+			if (!playerOne) {
+				playerTwo();
+				if (!playerTwo) {
+					playerThree();
+					if (!playerThree) {
+						playerFour();
+						if (!playerFour) {
+							playerFive();
+						}
+					}
+				}
+			}
+			break;
+		case 6:
+			playerOne();
+			if (!playerOne) {
+				playerTwo();
+				if (!playerTwo) {
+					playerThree();
+					if (!playerThree) {
+						playerFour();
+						if (!playerFour) {
+							playerFive();
+							if (!playerFive) {
+								playerSix();
+							}
+						}
+					}
+				}
+			}
+			break;
+		case 7:
+			playerOne();
+			if (!playerOne) {
+				playerTwo();
+				if (!playerTwo) {
+					playerThree();
+					if (!playerThree) {
+						playerFour();
+						if (!playerFour) {
+							playerFive();
+							if (!playerFive) {
+								playerSix();
+								if (!playerSix) {
+									playerSeven();
+								}
+							}
+						}
+					}
+				}
+			}
+			break;
+		case 8:
+			playerOne();
+			if (!playerOne) {
+				playerTwo();
+				if (!playerTwo) {
+					playerThree();
+					if (!playerThree) {
+						playerFour();
+						if (!playerFour) {
+							playerFive();
+							if (!playerFive) {
+								playerSix();
+								if (!playerSix) {
+									playerSeven();
+									if (!playerSeven) {
+										playerEight();
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			break;
+		case 9:
+			playerOne();
+			if (!playerOne) {
+				playerTwo();
+				if (!playerTwo) {
+					playerThree();
+					if (!playerThree) {
+						playerFour();
+						if (!playerFour) {
+							playerFive();
+							if (!playerFive) {
+								playerSix();
+								if (!playerSix) {
+									playerSeven();
+									if (!playerSeven) {
+										playerEight();
+										if (!playerEight) {
+											playerNine();
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			break;
+		case 10:
+			playerOne();
+			if (!playerOne) {
+				playerTwo();
+				if (!playerTwo) {
+					playerThree();
+					if (!playerThree) {
+						playerFour();
+						if (!playerFour) {
+							playerFive();
+							if (!playerFive) {
+								playerSix();
+								if (!playerSix) {
+									playerSeven();
+									if (!playerSeven) {
+										playerEight();
+										if (!playerEight) {
+											playerNine();
+											if (!playerNine) {
+												playerTen();
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			break;
+		}
+	}
+
+	private static void playerOne() {
+		System.out.println("IT IS PLAYER ONE'S TURN.");
+		printInfo();
+		System.out.println("Press press any key to roll.");
+		Scanner input = new Scanner(System.in);
+		String play = input.nextLine();
+		while (playerOne) {
+			roll();
+			if (list.contains(1)) {
+				if (oBank >= win) {
+					oWinner();
+				} else if (sum == list.size()) {
+					System.out.println("You have lost all your banked points.");
+					oBankZero();
+					oZero();
+					tZero();
+					printInfo();
+					remove();
+					sumZero();
+					playerTwo();
+				} else {
+					System.out
+							.println("You have rolled a 1. Your turn is over.");
+					oZero();
+					tZero();
+					printInfo();
+					remove();
+					sumZero();
+					playerTwo();
+				}
+			} else {
+				oPoints += sum;
+				System.out.println("Player One's Current: " + oPoints
+						+ " points");
+				printInfo();
+				if (oBank >= win) {
+					oWinner();
+				}
+				oBank += oPoints;
+				oZero();
+				tZero();
+				if (oBank >= win) {
+					oWinner();
+				}
+				sumZero();
+				remove();
+				playerTwo();
+			}
+		}
+	}
+
+	private static void playerTwo() {
+		System.out.println("IT IS PLAYER TWO's TURN.");
+		printInfo();
+		System.out.println("Press any key to roll.");
+		Scanner input = new Scanner(System.in);
+		String play = input.nextLine();
+		while (playerTwo) {
+			roll();
+			if (list.contains(1)) {
+				if (tBank >= win) {
+					tWinner();
+				} else if (sum == list.size()) {
+					System.out.println("You have lost all your banked points.");
+					tBankZero();
+					oZero();
+					tZero();
+					printInfo();
+					remove();
+					sumZero();
+					if (num == 2) {
+						playerOne();
+					} else {
+						playerThree();
+					}
+				} else {
+					System.out
+							.println("You have rolled a 1. Your turn is over.");
+					tZero();
+					oZero();
+					printInfo();
+					remove();
+					sumZero();
+					if (num == 2) {
+						playerOne();
+					} else {
+						playerThree();
+					}
+				}
+			} else {
+				tPoints += sum;
+				System.out.println("Player Two's Current: " + tPoints
+						+ " points");
+				printInfo();
+				if (tBank >= win) {
+					tWinner();
+				}
+				tBank += tPoints;
+				tZero();
+				oZero();
+				if (tBank >= win) {
+					tWinner();
+				}
+				sumZero();
+				remove();
+				if (num == 2) {
+					playerOne();
+				} else {
+					playerThree();
+				}
+			}
+		}
+	}
+
+	private static void playerThree() {
+		System.out.println("IT IS PLAYER THREE's TURN.");
+		printInfo();
+		System.out.println("Press any key to roll.");
+		Scanner input = new Scanner(System.in);
+		String play = input.nextLine();
+		while (playerThree) {
+			roll();
+			if (list.contains(1)) {
+				if (thBank >= win) {
+					thWinner();
+				} else if (sum == list.size()) {
+					System.out.println("You have lost all your banked points.");
+					thBankZero();
+					oZero();
+					tZero();
+					thZero();
+					printInfo();
+					remove();
+					sumZero();
+					if (num == 3) {
+						playerOne();
+					} else {
+						playerFour();
+					}
+				} else {
+					System.out
+							.println("You have rolled a 1. Your turn is over.");
+					tZero();
+					oZero();
+					thZero();
+					printInfo();
+					sumZero();
+					remove();
+					if (num == 3) {
+						playerOne();
+					} else if (num > 3) {
+						playerFour();
+					}
+				}
+			} else {
+				thPoints += sum;
+				System.out.println("Player Three's Current: " + thPoints
+						+ " points");
+				printInfo();
+				if (thBank >= win) {
+					thWinner();
+				}
+				thBank += thPoints;
+				tZero();
+				oZero();
+				thZero();
+				if (thBank >= win) {
+					thWinner();
+				}
+				sumZero();
+				remove();
+				if (num == 3) {
+					playerOne();
+				} else if (num > 3) {
+					playerFour();
+				}
+			}
+		}
+	}
+
+	private static void playerFour() {
+		System.out.println("IT IS PLAYER FOUR's TURN.");
+		printInfo();
+		System.out.println("Press any key to roll.");
+		Scanner input = new Scanner(System.in);
+		String play = input.nextLine();
+		while (playerFour) {
+			roll();
+			if (list.contains(1)) {
+				if (fBank >= win) {
+					fWinner();
+				} else if (sum == list.size()) {
+					System.out.println("You have lost all your banked points.");
+					fBankZero();
+					oZero();
+					tZero();
+					thZero();
+					fZero();
+					printInfo();
+					remove();
+					sumZero();
+					if (num == 4) {
+						playerOne();
+					} else {
+						playerFive();
+					}
+				} else {
+					System.out
+							.println("You have rolled a 1. Your turn is over.");
+					tZero();
+					oZero();
+					thZero();
+					fZero();
+					printInfo();
+					sumZero();
+					remove();
+					if (num == 4) {
+						playerOne();
+					} else if (num > 4) {
+						playerFive();
+					}
+				}
+			} else {
+				fPoints += sum;
+				System.out.println("Player Four's Current: " + fPoints
+						+ " points");
+				printInfo();
+				if (fBank >= win) {
+					fWinner();
+				}
+				fBank += fPoints;
+				tZero();
+				oZero();
+				thZero();
+				fZero();
+				if (fBank >= win) {
+					fWinner();
+				}
+				sumZero();
+				remove();
+				if (num == 4) {
+					playerOne();
+				} else if (num > 4) {
+					playerFive();
+				}
+			}
+		}
+	}
+
+	private static void playerFive() {
+		System.out.println("IT IS PLAYER FIVE's TURN.");
+		printInfo();
+		System.out.println("Press any key to roll.");
+		Scanner input = new Scanner(System.in);
+		String play = input.nextLine();
+		while (playerFive) {
+			roll();
+			if (list.contains(1)) {
+				if (fiBank >= win) {
+					fiWinner();
+				} else if (sum == list.size()) {
+					System.out.println("You have lost all your banked points.");
+					fiBankZero();
+					oZero();
+					tZero();
+					thZero();
+					fZero();
+					fiZero();
+					printInfo();
+					remove();
+					sumZero();
+					if (num == 5) {
+						playerOne();
+					} else {
+						playerSix();
+					}
+				} else {
+					System.out
+							.println("You have rolled a 1. Your turn is over.");
+					tZero();
+					oZero();
+					thZero();
+					fZero();
+					fiZero();
+					printInfo();
+					sumZero();
+					remove();
+					if (num == 5) {
+						playerOne();
+					} else if (num > 5) {
+						playerSix();
+					}
+				}
+			} else {
+				fiPoints += sum;
+				System.out.println("Player Five's Current: " + fiPoints
+						+ " points");
+				printInfo();
+				if (fiBank >= win) {
+					fiWinner();
+				}
+				fiBank += fiPoints;
+				tZero();
+				oZero();
+				thZero();
+				fZero();
+				fiZero();
+				if (fiBank >= win) {
+					fiWinner();
+				}
+				sumZero();
+				remove();
+				if (num == 5) {
+					playerOne();
+				} else if (num > 5) {
+					playerSix();
+				}
+			}
+		}
+	}
+
+	private static void playerSix() {
+		System.out.println("IT IS PLAYER Six's TURN.");
+		printInfo();
+		System.out.println("Press any key to roll.");
+		Scanner input = new Scanner(System.in);
+		String play = input.nextLine();
+		while (playerSix) {
+			roll();
+			if (list.contains(1)) {
+				if (sBank >= win) {
+					sWinner();
+				} else if (sum == list.size()) {
+					System.out.println("You have lost all your banked points.");
+					sBankZero();
+					oZero();
+					tZero();
+					thZero();
+					fZero();
+					fiZero();
+					sZero();
+					printInfo();
+					remove();
+					sumZero();
+					if (num == 6) {
+						playerOne();
+					} else {
+						playerSeven();
+					}
+				} else {
+					System.out
+							.println("You have rolled a 1. Your turn is over.");
+					tZero();
+					oZero();
+					thZero();
+					fZero();
+					fiZero();
+					sZero();
+					printInfo();
+					sumZero();
+					remove();
+					if (num == 6) {
+						playerOne();
+					} else if (num > 6) {
+						playerSeven();
+					}
+				}
+			} else {
+				sPoints += sum;
+				System.out.println("Player Six's Current: " + sPoints
+						+ " points");
+				printInfo();
+				if (sBank >= win) {
+					sWinner();
+				}
+
+				sBank += sPoints;
+				tZero();
+				oZero();
+				thZero();
+				fZero();
+				fiZero();
+				sZero();
+				if (sBank >= win) {
+					sWinner();
+				}
+				sumZero();
+				remove();
+				if (num == 6) {
+					playerOne();
+				} else if (num > 6) {
+					playerSeven();
+				}
+
+			}
+		}
+	}
+
+	private static void playerSeven() {
+		System.out.println("IT IS PLAYER SEVEN's TURN.");
+		printInfo();
+		System.out.println("Press any key to roll.");
+		Scanner input = new Scanner(System.in);
+		String play = input.nextLine();
+		while (playerSeven) {
+			roll();
+			if (list.contains(1)) {
+				if (seBank >= win) {
+					seWinner();
+				} else if (sum == list.size()) {
+					System.out.println("You have lost all your banked points.");
+					seBankZero();
+					oZero();
+					tZero();
+					thZero();
+					fZero();
+					fiZero();
+					sZero();
+					seZero();
+					printInfo();
+					remove();
+					sumZero();
+					if (num == 7) {
+						playerOne();
+					} else {
+						playerEight();
+					}
+				} else {
+					System.out
+							.println("You have rolled a 1. Your turn is over.");
+					tZero();
+					oZero();
+					thZero();
+					fZero();
+					fiZero();
+					sZero();
+					seZero();
+					printInfo();
+					sumZero();
+					remove();
+					if (num == 7) {
+						playerOne();
+					} else if (num > 7) {
+						playerEight();
+					}
+				}
+			} else {
+				sePoints += sum;
+				System.out.println("Player Seven's Current: " + sePoints
+						+ " points");
+				printInfo();
+				if (seBank >= win) {
+					seWinner();
+				}
+				seBank += sePoints;
+				tZero();
+				oZero();
+				thZero();
+				fZero();
+				fiZero();
+				sZero();
+				seZero();
+				if (seBank >= win) {
+					seWinner();
+				}
+				sumZero();
+				remove();
+				if (num == 7) {
+					playerOne();
+				} else if (num > 7) {
+					playerEight();
+				}
+			}
+		}
+	}
+
+	private static void playerEight() {
+		System.out.println("IT IS PLAYER EIGHT's TURN.");
+		printInfo();
+		System.out.println("Press any key to roll.");
+		Scanner input = new Scanner(System.in);
+		String play = input.nextLine();
+		while (playerEight) {
+			roll();
+			if (list.contains(1)) {
+				if (eBank >= win) {
+					eWinner();
+				} else if (sum == list.size()) {
+					System.out.println("You have lost all your banked points.");
+					eBankZero();
+					oZero();
+					tZero();
+					thZero();
+					fZero();
+					fiZero();
+					sZero();
+					seZero();
+					eZero();
+					printInfo();
+					remove();
+					sumZero();
+					if (num == 8) {
+						playerOne();
+					} else {
+						playerNine();
+					}
+				} else {
+					System.out
+							.println("You have rolled a 1. Your turn is over.");
+					tZero();
+					oZero();
+					thZero();
+					fZero();
+					fiZero();
+					sZero();
+					seZero();
+					eZero();
+					printInfo();
+					sumZero();
+					remove();
+					if (num == 8) {
+						playerOne();
+					} else if (num > 8) {
+						playerNine();
+					}
+				}
+			} else {
+				ePoints += sum;
+				System.out.println("Player Eight's Current: " + ePoints
+						+ " points");
+				printInfo();
+				if (eBank >= win) {
+					eWinner();
+				}
+				eBank += ePoints;
+				tZero();
+				oZero();
+				thZero();
+				fZero();
+				fiZero();
+				sZero();
+				seZero();
+				eZero();
+				if (eBank >= win) {
+					eWinner();
+				}
+				sumZero();
+				remove();
+				if (num == 8) {
+					playerOne();
+				} else if (num > 8) {
+					playerNine();
+				}
+			}
+		}
+	}
+
+	private static void playerNine() {
+		System.out.println("IT IS PLAYER NINE's TURN.");
+		printInfo();
+		System.out.println("Press any key to roll.");
+		Scanner input = new Scanner(System.in);
+		String play = input.nextLine();
+		while (playerNine) {
+			roll();
+			if (list.contains(1)) {
+				if (nBank >= win) {
+					nWinner();
+				} else if (sum == list.size()) {
+					System.out.println("You have lost all your banked points.");
+					nBankZero();
+					oZero();
+					tZero();
+					thZero();
+					fZero();
+					fiZero();
+					sZero();
+					seZero();
+					eZero();
+					nZero();
+					printInfo();
+					remove();
+					sumZero();
+					if (num == 9) {
+						playerOne();
+					} else {
+						playerTen();
+					}
+				} else {
+					System.out
+							.println("You have rolled a 1. Your turn is over.");
+					tZero();
+					oZero();
+					thZero();
+					fZero();
+					fiZero();
+					sZero();
+					seZero();
+					eZero();
+					nZero();
+					printInfo();
+					sumZero();
+					remove();
+					if (num == 9) {
+						playerOne();
+					} else if (num > 9) {
+						playerTen();
+					}
+				}
+			} else {
+				nPoints += sum;
+				System.out.println("Player Nine's Current: " + nPoints
+						+ " points");
+				printInfo();
+				if (nBank >= win) {
+					nWinner();
+				}
+				nBank += nPoints;
+				tZero();
+				oZero();
+				thZero();
+				fZero();
+				fiZero();
+				sZero();
+				seZero();
+				eZero();
+				nZero();
+				if (nBank >= win) {
+					nWinner();
+				}
+				sumZero();
+				remove();
+				if (num == 9) {
+					playerOne();
+				} else if (num > 9) {
+					playerTen();
+				}
+			}
+		}
+	}
+
+	private static void playerTen() {
+		System.out.println("IT IS PLAYER Ten's TURN.");
+		printInfo();
+		System.out.println("Press any key to roll.");
+		Scanner input = new Scanner(System.in);
+		String play = input.nextLine();
+		while (playerTen) {
+			roll();
+			if (list.contains(1)) {
+				if (teBank >= win) {
+					teWinner();
+				} else if (sum == list.size()) {
+					System.out.println("You have lost all your banked points.");
+					teBankZero();
+					oZero();
+					tZero();
+					thZero();
+					fZero();
+					fiZero();
+					sZero();
+					seZero();
+					eZero();
+					nZero();
+					teZero();
+					printInfo();
+					remove();
+					sumZero();
+					playerOne();
+				} else {
+					System.out
+							.println("You have rolled a 1. Your turn is over.");
+					tZero();
+					oZero();
+					thZero();
+					fZero();
+					fiZero();
+					sZero();
+					seZero();
+					eZero();
+					nZero();
+					teZero();
+					printInfo();
+					playerOne();
+					sumZero();
+					remove();
+				}
+			} else {
+				tePoints += sum;
+				System.out.println("Player Ten's Current: " + tePoints
+						+ " points");
+				printInfo();
+				if (teBank >= win) {
+					teWinner();
+				}
+				teBank += tePoints;
+				tZero();
+				oZero();
+				thZero();
+				fZero();
+				fiZero();
+				sZero();
+				seZero();
+				eZero();
+				nZero();
+				teZero();
+				if (teBank >= win) {
+					teWinner();
+				}
+				sumZero();
+				remove();
+				playerOne();
+			}
+		}
+	}
+
+	private static int roll() {
+		System.out.println("How many dice would you like to roll: ");
+		Scanner nor = new Scanner(System.in);
+		number = nor.nextInt();
+		Random rand = new Random();
+		for (int i = 0; i < number; i++) {
+			dice = rand.nextInt(6) + 1;
+			list.add(dice);
+			sum += list.get(i);
+		}
+		System.out.println("Your rolls are: ");
+		System.out.println(list);
+		return sum;
+	}
+
+	private static void remove() {
+		for (int i = 0; i < number; i++) {
+			list.clear();
+		}
+	}
+
+	private static int sumZero() {
+		sum = 0;
+		return sum;
+	}
+
+	private static int oBankZero() {
+		oBank = 0;
+		return oBank;
+	}
+
+	private static int tBankZero() {
+		tBank = 0;
+		return tBank;
+	}
+
+	private static int thBankZero() {
+		thBank = 0;
+		return thBank;
+	}
+
+	private static int fBankZero() {
+		fBank = 0;
+		return fBank;
+	}
+
+	private static int fiBankZero() {
+		fiBank = 0;
+		return fiBank;
+	}
+
+	private static int sBankZero() {
+		sBank = 0;
+		return sBank;
+	}
+
+	private static int seBankZero() {
+		seBank = 0;
+		return seBank;
+	}
+
+	private static int eBankZero() {
+		eBank = 0;
+		return eBank;
+	}
+
+	private static int nBankZero() {
+		nBank = 0;
+		return nBank;
+	}
+
+	private static int teBankZero() {
+		teBank = 0;
+		return teBank;
+	}
+
+	private static int oZero() {
+		oPoints = 0;
+		return oPoints;
+	}
+
+	private static int tZero() {
+		tPoints = 0;
+		return tPoints;
+	}
+
+	private static int thZero() {
+		thPoints = 0;
+		return thPoints;
+	}
+
+	private static int fZero() {
+		fPoints = 0;
+		return fPoints;
+	}
+
+	private static int fiZero() {
+		fiPoints = 0;
+		return fiPoints;
+	}
+
+	private static int sZero() {
+		sPoints = 0;
+		return sPoints;
+	}
+
+	private static int seZero() {
+		sePoints = 0;
+		return sePoints;
+	}
+
+	private static int eZero() {
+		ePoints = 0;
+		return ePoints;
+	}
+
+	private static int nZero() {
+		nPoints = 0;
+		return nPoints;
+	}
+
+	private static int teZero() {
+		tePoints = 0;
+		return tePoints;
+	}
+
+	private static void oWinner() {
+		System.out.println("Player One has won with " + oBank + " points");
+		printInfo();
+		System.exit(0);
+	}
+
+	private static void tWinner() {
+		System.out.println("Player Two has won with " + tBank + " points");
+		printInfo();
+		System.exit(0);
+	}
+
+	private static void thWinner() {
+		System.out.println("Player Three has won with " + thBank + " points");
+		printInfo();
+		System.exit(0);
+	}
+
+	private static void fWinner() {
+		System.out.println("Player Four has won with " + fBank + " points");
+		printInfo();
+		System.exit(0);
+	}
+
+	private static void fiWinner() {
+		System.out.println("Player Five has won with " + fiBank + " points");
+		printInfo();
+		System.exit(0);
+	}
+
+	private static void sWinner() {
+		System.out.println("Player Six has won with " + sBank + " points");
+		printInfo();
+		System.exit(0);
+	}
+
+	private static void seWinner() {
+		System.out.println("Player Seven has won with " + seBank + " points");
+		printInfo();
+		System.exit(0);
+	}
+
+	private static void eWinner() {
+		System.out.println("Player Eight has won with " + eBank + " points");
+		printInfo();
+		System.exit(0);
+	}
+
+	private static void nWinner() {
+		System.out.println("Player Nine has won with " + nBank + " points");
+		printInfo();
+		System.exit(0);
+	}
+
+	private static void teWinner() {
+		System.out.println("Player Ten has won with " + teBank + " points");
+		printInfo();
+		System.exit(0);
+	}
+
+	private static void printInfo() {
+		if (num == 2) {
+			System.out.println("Player One's\t|" + name + "'s Bank: " + oBank
+					+ " points");
+			System.out.println("Player Two's\t|" + tname + "'s Bank: " + tBank
+					+ " points");
+		} else if (num == 3) {
+			System.out.println("Player One's\t|" + name + "'s Bank: " + oBank
+					+ " points");
+			System.out.println("Player Two's\t|" + tname + "'s Bank: " + tBank
+					+ " points");
+			System.out.println("Player Three's\t|" + thname + "'s Bank: "
+					+ thBank + " points");
+		} else if (num == 4) {
+			System.out.println("Player One's\t|" + name + "'s Bank: " + oBank
+					+ " points");
+			System.out.println("Player Two's\t|" + tname + "'s Bank: " + tBank
+					+ " points");
+			System.out.println("Player Three's\t|" + thname + "'s Bank: "
+					+ thBank + " points");
+			System.out.println("Player Four's\t|" + fname + "'s Bank: " + fBank
+					+ " points");
+		} else if (num == 5) {
+			System.out.println("Player One's\t|" + name + "'s Bank: " + oBank
+					+ " points");
+			System.out.println("Player Two's\t|" + tname + "'s Bank: " + tBank
+					+ " points");
+			System.out.println("Player Three's\t|" + thname + "'s Bank: "
+					+ thBank + " points");
+			System.out.println("Player Four's\t|" + fname + "'s Bank: " + fBank
+					+ " points");
+			System.out.println("Player Five's\t|" + finame + "'s Bank: "
+					+ fiBank + " points");
+		} else if (num == 6) {
+			System.out.println("Player One's\t|" + name + "'s Bank: " + oBank
+					+ " points");
+			System.out.println("Player Two's\t|" + tname + "'s Bank: " + tBank
+					+ " points");
+			System.out.println("Player Three's\t|" + thname + "'s Bank: "
+					+ thBank + " points");
+			System.out.println("Player Four's\t|" + fname + "'s Bank: " + fBank
+					+ " points");
+			System.out.println("Player Five's\t|" + finame + "'s Bank: "
+					+ fiBank + " points");
+			System.out.println("Player Six's\t|" + sname + "'s Bank: " + sBank
+					+ " points");
+		} else if (num == 7) {
+			System.out.println("Player One's\t|" + name + "'s Bank: " + oBank
+					+ " points");
+			System.out.println("Player Two's\t|" + tname + "'s Bank: " + tBank
+					+ " points");
+			System.out.println("Player Three's\t|" + thname + "'s Bank: "
+					+ thBank + " points");
+			System.out.println("Player Four's\t|" + fname + "'s Bank: " + fBank
+					+ " points");
+			System.out.println("Player Five's\t|" + finame + "'s Bank: "
+					+ fiBank + " points");
+			System.out.println("Player Six's\t|" + sname + "'s Bank: " + sBank
+					+ " points");
+			System.out.println("Player Seven's\t|" + sename + "'s Bank: "
+					+ seBank + " points");
+		} else if (num == 8) {
+			System.out.println("Player One's\t|" + name + "'s Bank: " + oBank
+					+ " points");
+			System.out.println("Player Two's\t|" + tname + "'s Bank: " + tBank
+					+ " points");
+			System.out.println("Player Three's\t|" + thname + "'s Bank: "
+					+ thBank + " points");
+			System.out.println("Player Four's\t|" + fname + "'s Bank: " + fBank
+					+ " points");
+			System.out.println("Player Five's\t|" + finame + "'s Bank: "
+					+ fiBank + " points");
+			System.out.println("Player Six's\t|" + sname + "'s Bank: " + sBank
+					+ " points");
+			System.out.println("Player Seven's\t|" + sename + "'s Bank: "
+					+ seBank + " points");
+			System.out.println("Player Eight's\t|" + ename + "'s Bank: "
+					+ eBank + " points");
+		} else if (num == 9) {
+			System.out.println("Player One's\t|" + name + "'s Bank: " + oBank
+					+ " points");
+			System.out.println("Player Two's\t|" + tname + "'s Bank: " + tBank
+					+ " points");
+			System.out.println("Player Three's\t|" + thname + "'s Bank: "
+					+ thBank + " points");
+			System.out.println("Player Four's\t|" + fname + "'s Bank: " + fBank
+					+ " points");
+			System.out.println("Player Five's\t|" + finame + "'s Bank: "
+					+ fiBank + " points");
+			System.out.println("Player Six's\t|" + sname + "'s Bank: " + sBank
+					+ " points");
+			System.out.println("Player Seven's\t|" + sename + "'s Bank: "
+					+ seBank + " points");
+			System.out.println("Player Eight's\t|" + ename + "'s Bank: "
+					+ eBank + " points");
+			System.out.println("Player Nine's\t|" + nname + "'s Bank: " + nBank
+					+ " points");
+		} else if (num == 10) {
+			System.out.println("Player One's\t|" + name + "'s Bank: " + oBank
+					+ " points");
+			System.out.println("Player Two's\t|" + tname + "'s Bank: " + tBank
+					+ " points");
+			System.out.println("Player Three's\t|" + thname + "'s Bank: "
+					+ thBank + " points");
+			System.out.println("Player Four's\t|" + fname + "'s Bank: " + fBank
+					+ " points");
+			System.out.println("Player Five's\t|" + finame + "'s Bank: "
+					+ fiBank + " points");
+			System.out.println("Player Six's\t|" + sname + "'s Bank: " + sBank
+					+ " points");
+			System.out.println("Player Seven's\t|" + sename + "'s Bank: "
+					+ seBank + " points");
+			System.out.println("Player Eight's\t|" + ename + "'s Bank: "
+					+ eBank + " points");
+			System.out.println("Player Nine's\t|" + nname + "'s Bank: " + nBank
+					+ " points");
+			System.out.println("Player Ten's\t|" + tename + "'s Bank: "
+					+ teBank + " points");
+		}
+	}
+}
