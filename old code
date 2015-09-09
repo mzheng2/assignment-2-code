@@ -17,10 +17,6 @@ public class TheEnhancedGameOfPig {
 	static Boolean playerTwo = true;
 	static Boolean playerThree = true;
 	static Boolean playerFour = true;
-	static String name;
-	static String tname;
-	static String thname;
-	static String fname;
 	static int oPoints = 0;
 	static int tPoints = 0;
 	static int thPoints = 0;
