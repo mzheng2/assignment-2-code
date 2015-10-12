@@ -138,12 +138,12 @@ public class Player {
 				playersCurrentPoints += dice;
 				displayDiceRoll();
 				displayPlayersCurrentScore();
-				inputToContinueOrStop
+				inputToContinueOrStop(playerTurn);
 			}
 		}
 	}
 	
-	public void inputToContinueOrStop(){
+	public void inputToContinueOrStop(boolean playerTurn){
 		continueOrStopTurn();
 		playerReply();
 		if (reply.equals("b")) {
